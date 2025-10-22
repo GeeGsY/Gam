@@ -3,10 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GameHaven - The Ultimate Offline Gaming Source</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <p>Hello World</p>
+
+    <header class="sticky top-0 z-50 bg-gray-900 shadow-xl border-b border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#top" class="text-3xl font-extrabold text-cyan-400 tracking-wider">
+                Game<span class="text-white">Haven</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="#news" class="text-gray-300 hover:text-cyan-400 transition duration-300">News</a>
+                <a href="#platforms" class="text-gray-300 hover:text-cyan-400 transition duration-300">Platforms</a>
+                <a href="#genres" class="text-gray-300 hover:text-cyan-400 transition duration-300">Genres</a>
+                <a href="#contact" class="text-gray-300 hover:text-cyan-400 transition duration-300">Contact</a>
+            </nav>
+            <button class="md:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 transition duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <section id="top" class="hero-bg h-[60vh] md:h-[80vh] flex items-center justify-center text-center">
+        <div class="p-4 sm:p-8 max-w-4xl">
+            <h1 class="text-5xl sm:text-7xl font-black text-white mb-4 leading-tight shadow-text-lg">
+                Your <span class="text-cyan-400">Gaming</span> Universe, Offline Ready.
+            </h1>
+            <p class="text-lg sm:text-2xl text-gray-300 mb-8 font-medium">
+                The definitive source for reviews, features, and platform spotlights across PC, Console, and Mobile gaming.
+            </p>
+            <a href="#news" class="inline-block px-8 py-3 bg-cyan-600 text-white font-bold text-xl rounded-full shadow-lg hover:bg-cyan-500 transform hover:scale-105 transition duration-300">
+                Explore The Latest
+            </a>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
+
+        <section id="news">
+            <h2 class="section-title text-4xl font-bold mb-12">Latest News & Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-2xl hover:shadow-cyan-500/50 transition duration-300 transform hover:scale-[1.02]">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/1F2937/FFFFFF?text=New+RPG+Launch" alt="Placeholder for RPG Game News">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-cyan-400 uppercase tracking-widest">PC & Console</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3 text-white">Shadow's Ascent: First 10 Hours Review</h3>
+                        <p class="text-gray-400 text-sm">A deep dive into the massive new open-world RPG and its complex narrative systems. Is it worth the hype?</p>
+                        <a href="#" class="mt-4 inline-block text-cyan-400 font-semibold hover:text-cyan-300">Read Article &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-2xl hover:shadow-cyan-500/50 transition duration-300 transform hover:scale-[1.02]">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/4B5563/FFFFFF?text=Mobile+Game+Update" alt="Placeholder for Mobile Game News">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-green-400 uppercase tracking-widest">Mobile Exclusive</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3 text-white">Patch 2.1: Balance Changes to Top Tier Units</h3>
+                        <p class="text-gray-400 text-sm">Detailed analysis of the latest update for the highly popular strategy title, focusing on meta shifts.</p>
+                        <a href="#" class="mt-4 inline-block text-cyan-400 font-semibold hover:text-cyan-300">Read Article &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-2xl hover:shadow-cyan-500/50 transition duration-300 transform hover:scale-[1.02]">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/6B7280/FFFFFF?text=Windows+Tech+Tips" alt="Placeholder for PC Hardware">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-red-400 uppercase tracking-widest">Hardware Focus</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3 text-white">Building the Budget Rig: Maximizing FPS on Windows</h3>
+                        <p class="text-gray-400 text-sm">Our comprehensive guide to assembling an affordable PC without compromising competitive gaming performance.</p>
+                        <a href="#" class="mt-4 inline-block text-cyan-400 font-semibold hover:text-cyan-300">Read Article &rarr;</a>
+                    </div>
+                </div>
+
+                 <div class="bg-gray-800 rounded-xl overflow-hidden shadow-2xl hover:shadow-cyan-500/50 transition duration-300 transform hover:scale-[1.02]">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/374151/FFFFFF?text=Console+Exclusive+Leak" alt="Placeholder for Console Exclusive">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-indigo-400 uppercase tracking-widest">Console</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3 text-white">Next-Gen Console Exclusive Gameplay Footage Leaks</h3>
+                        <p class="text-gray-400 text-sm">First look at an upcoming title for the latest console, featuring stunning visuals and innovative mechanics.</p>
+                        <a href="#" class="mt-4 inline-block text-cyan-400 font-semibold hover:text-cyan-300">Read Article &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="platforms">
+            <h2 class="section-title text-4xl font-bold mb-12">Platform Deep Dive: Windows & Mobile Focus</h2>
+            
+            <div class="mb-16 bg-gray-800 rounded-3xl p-6 sm:p-10 shadow-3xl border-2 border-cyan-700/50">
+                <div class="flex flex-col lg:flex-row items-center gap-8">
+                    <div class="lg:w-1/2">
+                        <span class="text-2xl font-extrabold text-cyan-400 block mb-2">PC & Windows Mastery</span>
+                        <h3 class="text-5xl font-black text-white mb-6">Unleash Max Performance</h3>
+                        <p class="text-gray-300 text-lg mb-6">
+                            The PC platform offers unparalleled customization and performance. Our Windows features focus on optimization guides, exclusive mods, and competitive hardware reviews to ensure you're always playing at your peak.
+                        </p>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-center"><span class="text-cyan-400 mr-3 text-xl">&#9658;</span> FPS Optimization Guides</li>
+                            <li class="flex items-center"><span class="text-cyan-400 mr-3 text-xl">&#9658;</span> In-Depth GPU/CPU Benchmarks</li>
+                            <li class="flex items-center"><span class="text-cyan-400 mr-3 text-xl">&#9658;</span> Exclusive Windows Game Mods</li>
+                        </ul>
+                        <a href="#" class="mt-8 inline-block px-6 py-3 bg-cyan-600 text-white font-bold rounded-xl shadow-lg hover:bg-cyan-500 transition duration-300">
+                            View Windows Features
+                        </a>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <img class="w-full rounded-2xl shadow-xl border border-gray-700" src="https://placehold.co/800x450/111827/FFFFFF?text=Windows+Gaming+Setup" alt="Windows PC Gaming Setup Placeholder">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray-800 rounded-3xl p-6 sm:p-10 shadow-3xl border-2 border-green-700/50">
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-8">
+                    <div class="lg:w-1/2">
+                        <span class="text-2xl font-extrabold text-green-400 block mb-2">Mobile Gaming Excellence</span>
+                        <h3 class="text-5xl font-black text-white mb-6">Pocket Powerhouses</h3>
+                        <p class="text-gray-300 text-lg mb-6">
+                            Mobile gaming is no longer casual. We provide dedicated articles on controller support, touch screen mastery, and reviews of high-fidelity titles. Get the most out of your iOS and Android devices.
+                        </p>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-center"><span class="text-green-400 mr-3 text-xl">&#9658;</span> Best Mobile Controller Setups</li>
+                            <li class="flex items-center"><span class="text-green-400 mr-3 text-xl">&#9658;</span> Optimizing Graphics for Battery Life</li>
+                            <li class="flex items-center"><span class="text-green-400 mr-3 text-xl">&#9658;</span> Top 10 Competitive Mobile Games</li>
+                        </ul>
+                        <a href="#" class="mt-8 inline-block px-6 py-3 bg-green-600 text-white font-bold rounded-xl shadow-lg hover:bg-green-500 transition duration-300">
+                            Explore Mobile Guides
+                        </a>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <img class="w-full rounded-2xl shadow-xl border border-gray-700" src="https://placehold.co/800x450/111827/FFFFFF?text=Mobile+Game+Screen" alt="Mobile Gaming Screen Placeholder">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center text-gray-500 italic">
+                <p>Console (Xbox, PlayStation, Switch) coverage is available in our News and Genre sections.</p>
+            </div>
+        </section>
+
+        <section id="genres">
+            <h2 class="section-title text-4xl font-bold mb-12">Browse by Genre</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+                
+                <div class="bg-gray-800 p-6 rounded-xl text-center shadow-lg border-b-4 border-cyan-600 hover:bg-gray-700 transition duration-300 cursor-pointer transform hover:scale-105">
+                    <div class="text-5xl mb-2 text-cyan-400">⚔️</div>
+                    <h4 class="text-xl font-semibold text-white">RPG</h4>
+                    <p class="text-sm text-gray-400">Role-Playing</p>
+                </div>
+                
+                <div class="bg-gray-800 p-6 rounded-xl text-center shadow-lg border-b-4 border-cyan-600 hover:bg-gray-700 transition duration-300 cursor-pointer transform hover:scale-105">
+                    <div class="text-5xl mb-2 text-cyan-400">🎯</div>
+                    <h4 class="text-xl font-semibold text-white">FPS</h4>
+                    <p class="text-sm text-gray-400">First-Person Shooter</p>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-xl text-center shadow-lg border-b-4 border-cyan-600 hover:bg-gray-700 transition duration-300 cursor-pointer transform hover:scale-105">
+                    <div class="text-5xl mb-2 text-cyan-400">🏎️</div>
+                    <h4 class="text-xl font-semibold text-white">Racing</h4>
+                    <p class="text-sm text-gray-400">High-Speed Action</p>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-xl text-center shadow-lg border-b-4 border-cyan-600 hover:bg-gray-700 transition duration-300 cursor-pointer transform hover:scale-105">
+                    <div class="text-5xl mb-2 text-cyan-400">🧠</div>
+                    <h4 class="text-xl font-semibold text-white">Strategy</h4>
+                    <p class="text-sm text-gray-400">Tactical & Planning</p>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-xl text-center shadow-lg border-b-4 border-cyan-600 hover:bg-gray-700 transition duration-300 cursor-pointer transform hover:scale-105">
+                    <div class="text-5xl mb-2 text-cyan-400">🤼</div>
+                    <h4 class="text-xl font-semibold text-white">Sports</h4>
+                    <p class="text-sm text-gray-400">Simulation & Arcade</p>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-xl text-center shadow-lg border-b-4 border-cyan-600 hover:bg-gray-700 transition duration-300 cursor-pointer transform hover:scale-105">
+                    <div class="text-5xl mb-2 text-cyan-400">👽</div>
+                    <h4 class="text-xl font-semibold text-white">Survival</h4>
+                    <p class="text-sm text-gray-400">Open-World & Crafting</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-blue-900/50 border-l-4 border-blue-500 rounded-xl p-8 text-center shadow-inner">
+            <h3 class="text-3xl font-bold text-white mb-3">Designed for Speed and Offline Access</h3>
+            <p class="text-blue-200 text-lg">
+                GameHaven is a static design, meaning rapid loading times and full availability of all articles and features even when you are offline. All content is pre-rendered for instant viewing.
+            </p>
+        </section>
+
+    </main>
+
+    <footer id="contact" class="bg-gray-950 border-t border-gray-800 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-2xl font-extrabold text-cyan-400 mb-2">GameHaven</h3>
+            <p class="text-gray-500 mb-8">© 2024 GameHaven. All rights reserved. A static website framework for dedicated gamers.</p>
+            
+            <div class="flex justify-center space-x-6 text-gray-400">
+                <a href="#" class="hover:text-cyan-400 transition duration-200">Privacy Policy</a>
+                <a href="#" class="hover:text-cyan-400 transition duration-200">Terms of Use</a>
+                <a href="#" class="hover:text-cyan-400 transition duration-200">Sitemap</a>
+            </div>
+            
+        </div>
+    </footer>
+
 </body>
 </html>
