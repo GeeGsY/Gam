@@ -1,22 +1,25 @@
 /* Apply Inter font globally and ensure dark background */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #111827; /* Dark charcoal/slate */
-    color: #577ecb; /* Light gray text */
+    background-color: #111827; /* Dark charcoal/slate (Tailwind gray-900) */
+    color: #D1D5DB; /* Light gray text (Tailwind gray-300) */
     scroll-behavior: smooth;
 }
+
 .hero-bg {
-    background-image: linear-gradient(rgba(17, 24, 39, 0.😎, rgba(17, 24, 39, 1))), 
-                      url('https://placehold.co/1920x800/2563EB/ffffff?text=Epic+Gaming+Scene+Placeholder');
+    /* This color matches the dark blue in your reference image */
+    background-color: rgb(41, 79, 161);
     background-size: cover;
     background-position: center;
 }
+
 .section-title {
     position: relative;
     display: inline-block;
     padding-bottom: 0.5rem;
-    color: #38BDF8; /* Sky Blue */
+    color: #38BDF8; /* Sky Blue (Tailwind cyan-400) */
 }
+
 .section-title::after {
     content: '';
     position: absolute;
@@ -27,14 +30,18 @@ body {
     background-color: #38BDF8;
     border-radius: 9999px;
 }
+
 /* Custom scrollbar for aesthetics (optional, works on some browsers) */
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
-    background: #345e98;
+    /* Changed color to match the site's card background (gray-800) */
+    background: #1F2937;
 }
+
 ::-webkit-scrollbar-thumb {
-    background: #0EA5E9;
+    background: #0EA5E9; /* (Tailwind cyan-500) */
     border-radius: 4px;
 }
