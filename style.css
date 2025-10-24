@@ -31,9 +31,30 @@ nav {
   padding: 0 2rem;
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+#haven {
+  color: white;
+  font-weight: bold;
+}
+
+.namee {
+  text-decoration: none;
+  list-style: none;
+}
+.namee:visited {
+  text-decoration: none;
+  color: inherit;
+
+}
+
 .logo {
   font-size: 2rem;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .logo span:first-child {
@@ -194,7 +215,7 @@ nav {
 
 .blog-image {
   width: 100%;
-  height: 200px;
+  height: 210px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   display: flex;
   align-items: center;
@@ -202,7 +223,7 @@ nav {
   font-size: 3rem;
 }
 
-.blog-card:nth-child(2) .blog-image {
+/* .blog-card:nth-child(2) .blog-image {
   background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
 
@@ -220,7 +241,7 @@ nav {
 
 .blog-card:nth-child(6) .blog-image {
   background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
-}
+} */
 
 .blog-content {
   padding: 1.5rem;
@@ -330,5 +351,28 @@ footer p {
 }
  #rd1{
   margin-top: 50px;
+}
+
+.LNH {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  text-align: left;
+} 
+
+.LNH::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 8%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #00d9ff, transparent);
 }
 
