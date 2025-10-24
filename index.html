@@ -14,10 +14,10 @@
             </div>
             <ul class="nav-links">
                 <li><a href="news.html">News</a></li>
-                <li><a href="#blogs">Reviews</a></li>
-                <li><a href="#blogs">Platforms</a></li>
-                <li><a href="#blogs">Genres</a></li>
-                <li><a href="#footer">Contact</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="platforms.html">Platforms</a></li>
+                <li><a href="genres.html">Genres</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -31,10 +31,10 @@
     </section>
 
     <section class="section" id="blogs">
-        <h2 class="section-title">Latest Gaming News & Reviews</h2>
+        <h2 class="section-title">Latest Gaming News</h2>
         <div class="blog-grid">
             <div class="blog-card">
-                <div class="blog-image">🎮</div>
+                <div class="blog-image" id="rtx1"> <img src="images/RayTracing/rtx on.jpg" alt=""></div>
                 <div class="blog-content">
                     <div class="blog-category">PC Gaming</div>
                     <h3 class="blog-title">Next-Gen Graphics: Ray Tracing Evolution</h3>
@@ -47,11 +47,13 @@
             </div>
 
             <div class="blog-card">
-                <div class="blog-image">🕹️</div>
+                <div class="blog-image" id="switch2"><img src="images/Switch2/switch2.avif" alt=""></div>
                 <div class="blog-content">
                     <div class="blog-category">Console</div>
-                    <h3 class="blog-title">PlayStation Exclusive Lineup 2025</h3>
-                    <p class="blog-excerpt">A deep dive into the most anticipated PlayStation exclusives launching this year and what makes them special.</p>
+                    <h3 class="blog-title">Switch 2</h3>
+                    <p class="blog-excerpt">
+                        Discover the features and exclusive titles of the highly anticipated Nintendo Switch 2 console.
+                    </p>
                     <div class="blog-meta">
                         <span>8 min read</span>
                         <a href="#" class="read-more">Read More →</a>
@@ -60,11 +62,11 @@
             </div>
 
             <div class="blog-card">
-                <div class="blog-image">📱</div>
+                <div class="blog-image" id="ananta1"><img src="images/Ananta/ananta1.jpg" alt=""></div>
                 <div class="blog-content">
                     <div class="blog-category">Mobile Gaming</div>
-                    <h3 class="blog-title">Top 10 Mobile Games You Can't Miss</h3>
-                    <p class="blog-excerpt">From strategy to action, discover the mobile games that are redefining portable entertainment.</p>
+                    <h3 class="blog-title">Ananta: Upcoming open-world RPG</h3>
+                    <p class="blog-excerpt">The upcoming free-to-play urban open-world RPG</p>
                     <div class="blog-meta">
                         <span>6 min read</span>
                         <a href="#" class="read-more">Read More →</a>
@@ -73,11 +75,11 @@
             </div>
 
             <div class="blog-card">
-                <div class="blog-image">🎯</div>
+                <div class="blog-image" id="es1"><img src="images/Esports/games.webp" alt=""></div>
                 <div class="blog-content">
                     <div class="blog-category">Esports</div>
-                    <h3 class="blog-title">Competitive Gaming: Tournament Highlights</h3>
-                    <p class="blog-excerpt">Recap of the most thrilling moments from recent esports championships and upcoming events to watch.</p>
+                    <h3 class="blog-title">Esports World Cup 2026: 21 Returning Titles Announced</h3>
+                    <p class="blog-excerpt">Get ready for another unforgettable summer of competition and spectacle — the Esports World Cup (EWC) returns to Riyadh, Saudi Arabia, from July 6 to August 23, 2026!</p>
                     <div class="blog-meta">
                         <span>7 min read</span>
                         <a href="#" class="read-more">Read More →</a>
@@ -86,11 +88,11 @@
             </div>
 
             <div class="blog-card">
-                <div class="blog-image">🎨</div>
+                <div class="blog-image" id="silk1"><img src="images/Indie/Silksong.avif" alt=""></div>
                 <div class="blog-content">
                     <div class="blog-category">Indie Spotlight</div>
-                    <h3 class="blog-title">Hidden Gems: Indie Games Worth Playing</h3>
-                    <p class="blog-excerpt">Showcasing innovative indie titles that push creative boundaries and deliver unique experiences.</p>
+                    <h3 class="blog-title">Hollow Knight: Silksong Rose to Success</h3>
+                    <p class="blog-excerpt">Hollow Knight: Silksong blew in like a hurricane at the beginning of this month, and it's already putting up numbers that major developers would envy.</p>
                     <div class="blog-meta">
                         <span>5 min read</span>
                         <a href="#" class="read-more">Read More →</a>
@@ -99,14 +101,14 @@
             </div>
 
             <div class="blog-card">
-                <div class="blog-image">⚡</div>
+                <div class="blog-image" id="gpu1"><img src="images/Hardware/gpu1.jpeg" alt=""></div>
                 <div class="blog-content">
                     <div class="blog-category">Hardware</div>
-                    <h3 class="blog-title">Gaming Peripherals: Performance Guide</h3>
-                    <p class="blog-excerpt">Expert reviews on keyboards, mice, and headsets designed to give you the competitive edge.</p>
+                    <h3 class="blog-title">Best Graphics Card in 2025</h3>
+                    <p class="blog-excerpt">Hunting for your new GPU for your new rig? Here is everything you need to know...</p>
                     <div class="blog-meta">
                         <span>9 min read</span>
-                        <a href="#" class="read-more">Read More →</a>
+                        <a href="#" class="read-more" id="rd1">Read More →</a>
                     </div>
                 </div>
             </div>
@@ -149,11 +151,11 @@
         }, observerOptions);
 
         document.querySelectorAll('.blog-card').forEach((card, index) => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = `all 0.6s ease ${index * 0.1}s`;
-            observer.observe(card);
-        });
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = `all 0.6s ease`; // <-- This line is now fixed
+        observer.observe(card);
+    });
     </script>
 </body>
 </html>
