@@ -528,6 +528,33 @@ footer p {
   
 }
 
+.espn-video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
 
+/* raytracing */
+
+.rt-image{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+/* switch2 */
+
+.ananta-image{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 
