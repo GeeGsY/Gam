@@ -4,39 +4,244 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Your Page Title - GameHaven</title>
-    
+    <title>Reviews - GameHaven</title>
+    <link rel="icon" href="images/icons/icooon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">
-                <span><a href="index.html" id="namee">Game</span><span id="haven">Haven</span></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="news.html">News</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="platforms.html">Platforms</a></li>
-                <li><a href="genres.html">Genres</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                </ul>
-        </nav>
-    </header>
+   <header>
+    <nav>
+        <div class="logo">
+           <span><a href="index.html" id="namee">Game</span><span id="haven">Haven</span></a>
+        </div>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        
+        <label for="nav-toggle" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="news.html">News</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="platforms.html">Platforms</a></li>
+            <li><a href="genres.html">Genres</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
     <section class="section" style="padding-top: 100px;">
         
-        <h1 class="section-title">Your Page Title Here</h1>
+        <h1 class="section-title">Game Reviews</h1>
 
-        <p>This is a paragraph. You can write your introduction or any text here. Just wrap it in &lt;p&gt; tags.</p>
-        <p>Add as many paragraphs as you need. This template is for simple text pages.</p>
+        <div class="review-filters">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">PC</button>
+            <button class="filter-btn">Console</button>
+            <button class="filter-btn">Mobile</button>
+        </div>
+        <div class="blog-grid">
 
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="images/Indie/Silksong.avif" alt="[Game Title]" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="blog-content">
+                    <div class="review-score-box">
+                        <div class="blog-category">Game Review</div>
+                        <div class="review-score">9.5</div>
+                    </div>
+                    <h3 class="blog-title">Hollow Knight: Silksong</h3>
+                    <p class="blog-excerpt">A masterpiece of exploration and combat. Team Cherry delivers on the hype with a world even bigger and more dangerous than the last.</p>
+                    <div class="blog-meta">
+                        <span>Yung pangalan ng nag review</span>
+                        <a href="#" class="read-more">Read Full Review →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="images/Battlefield 6/bf61.jpg" alt="[Game Title]" style="width:100%; height:100%; object-fit:cover; background: #333;">
+                </div>
+                <div class="blog-content">
+                    <div class="review-score-box">
+                        <div class="blog-category">PC Review</div>
+                        <div class="review-score">9.5</div>
+                    </div>
+                    <h3 class="blog-title">Battlefield&trade; 6</h3>
+                    <p class="blog-excerpt">The 2025 first-person shooter game developed by Battlefield Studios and published by Electronic Arts.</p>
+                    <div class="blog-meta">
+                        <span>Yung pangalan ng nag review</span>
+                        <a href="#" class="read-more">Read Full Review →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="images/dispatch/dp1.jpg" alt="" style="width:100%; height:100%; object-fit:cover; background: #333;">
+                </div>
+                <div class="blog-content">
+                    <div class="review-score-box">
+                        <div class="blog-category">PC Review</div>
+                        <div class="review-score">8.0</div>
+                    </div>
+                    <h3 class="blog-title">Dispatch</h3>
+                    <p class="blog-excerpt">An episodic adventure game developed by AdHoc Studio.</p>
+                    <div class="blog-meta">
+                        <span>Yung pangalan ng nag review</span>
+                        <a href="#" class="read-more">Read Full Review →</a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="blog-card">
+                <div class="blog-image">
+                    <img src="images/Mobiles/Arena-Breakout.webp" alt="" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="blog-content">
+                    <div class="review-score-box">
+                        <div class="blog-category">Game Review</div>
+                        <div class="review-score">9.5</div>
+                    </div>
+                    <h3 class="blog-title">Arena Breakout: Realistic FPS</h3>
+                    <p class="blog-excerpt">Next-Gen Immersive Tactical FPS, and a first-of-its-kind extraction looter shooter that pushes the limits of war simulation on Mobile.</p>
+                    <div class="blog-meta">
+                        <span>Yung pangalan ng nag review</span>
+                        <a href="#" class="read-more">Read Full Review →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="images/Reviews/elden ring.webp" alt="" style="width:100%; height:100%; object-fit:cover; background: #333;">
+                </div>
+                <div class="blog-content">
+                    <div class="review-score-box">
+                        <div class="blog-category">PC Review</div>
+                        <div class="review-score">9.5</div>
+                    </div>
+                    <h3 class="blog-title">Elden Ring</h3>
+                    <p class="blog-excerpt">2022 action role-playing game developed by FromSoftware and published by Bandai Namco Entertainment.</p>
+                    <div class="blog-meta">
+                        <span>Yung pangalan ng nag review</span>
+                        <a href="#" class="read-more">Read Full Review →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="images/Reviews/astrobot.jpg" alt="" style="width:100%; height:100%; object-fit:cover; background: #333;">
+                </div>
+                <div class="blog-content">
+                    <div class="review-score-box">
+                        <div class="blog-category">PC Review</div>
+                        <div class="review-score">8.0</div>
+                    </div>
+                    <h3 class="blog-title">Astro Bot</h3>
+                    <p class="blog-excerpt">An episodic adventure game developed by AdHoc Studio.2024 platform game developed by Team Asobi and published by Sony Interactive Entertainment for the PlayStation 5 in celebration of PlayStation's 30th anniversary.</p>
+                    <div class="blog-meta">
+                        <span>Yung pangalan ng nag review</span>
+                        <a href="#" class="read-more">Read Full Review →</a>
+                    </div>
+                </div>
+            </div>
+             <div class="blog-card">
+                <div class="blog-image">
+                    <img src="images/Reviews/perso5.png" alt="" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="blog-content">
+                    <div class="review-score-box">
+                        <div class="blog-category">Game Review</div>
+                        <div class="review-score">9.5</div>
+                    </div>
+                    <h3 class="blog-title">Persona 5: The Phantom X</h3>
+                    <p class="blog-excerpt">2025 role-playing video game developed by Black Wings Game Studio and published by Perfect World in China and South Korea, Iwplay World in Taiwan and Southeast Asia, Atlus in Japan and Sega worldwide.</p>
+                    <div class="blog-meta">
+                        <span>Yung pangalan ng nag review</span>
+                        <a href="#" class="read-more">Read Full Review →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="images/Reviews/wuwa.jpg" alt="" style="width:100%; height:100%; object-fit:cover; background: #333;">
+                </div>
+                <div class="blog-content">
+                    <div class="review-score-box">
+                        <div class="blog-category">PC Review</div>
+                        <div class="review-score">9.5</div>
+                    </div>
+                    <h3 class="blog-title">Wuthering Waves</h3>
+                    <p class="blog-excerpt"> 2024 free-to-play open world action role-playing game developed and published by Kuro Games.</p>
+                    <div class="blog-meta">
+                        <span>Yung pangalan ng nag review</span>
+                        <a href="#" class="read-more">Read Full Review →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="images/Reviews/nas.jpg" alt="" style="width:100%; height:100%; object-fit:cover; background: #333;">
+                </div>
+                <div class="blog-content">
+                    <div class="review-score-box">
+                        <div class="blog-category">PC Review</div>
+                        <div class="review-score">8.0</div>
+                    </div>
+                    <h3 class="blog-title">Nascar 25</h3>
+                    <p class="blog-excerpt">NASCAR 25 is a sim racing game published and developed by iRacing Studios</p>
+                    <div class="blog-meta">
+                        <span>Yung pangalan ng nag review</span>
+                        <a href="#" class="read-more">Read Full Review →</a>
+                    </div>
+                </div>
+            </div>
+            </div>
         </section>
 
     <footer id="footer">
         <p>&copy; 2025 GameHaven. All rights reserved.</p>
     </footer>
 
+     <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.blog-card').forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = `all 0.6s ease`; 
+        observer.observe(card);
+    });
+    </script>
 </body>
 </html>

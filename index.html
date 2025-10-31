@@ -4,23 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameHaven - Your Gaming Universe</title>
+    <link rel="icon" href="images/icons/icooon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">
-               <span><a href="index.html" id="namee">Game</span><span id="haven">Haven</span></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="news.html">News</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="platforms.html">Platforms</a></li>
-                <li><a href="genres.html">Genres</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <div class="logo">
+           <span><a href="index.html" id="namee">Game</span><span id="haven">Haven</span></a>
+        </div>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        
+        <label for="nav-toggle" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="news.html">News</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="platforms.html">Platforms</a></li>
+            <li><a href="genres.html">Genres</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
     <section class="hero" id="home">
         <div class="hero-content">
@@ -108,7 +118,7 @@
                     <p class="blog-excerpt">Hunting for your new GPU for your new rig? Here is everything you need to know...</p>
                     <div class="blog-meta">
                         <span>9 min read</span>
-                        <a href="#" class="read-more" id="rd1">Read More →</a>
+                        <a href="Gpu.html" class="read-more" id="rd1">Read More →</a>
                     </div>
                 </div>
             </div>
@@ -151,7 +161,7 @@
         document.querySelectorAll('.blog-card').forEach((card, index) => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(30px)';
-        card.style.transition = `all 0.6s ease`; // <-- This line is now fixed
+        card.style.transition = `all 0.6s ease`;
         observer.observe(card);
     });
     </script>
