@@ -10,30 +10,145 @@
 <body>
 
     <header>
-        <nav>
-            <div class="logo">
-                <span><a href="index.html" id="namee">Game</span><span id="haven">Haven</span></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="news.html">News</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="platforms.html">Platforms</a></li>
-                <li><a href="genres.html">Genres</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                </ul>
-        </nav>
-    </header>
+    <nav>
+        <div class="logo">
+           <span><a href="index.html" id="namee">Game</span><span id="haven">Haven</span></a>
+        </div>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        
+        <label for="nav-toggle" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="news.html">News</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="platforms.html">Platforms</a></li>
+            <li><a href="genres.html">Genres</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
     <section class="section" style="padding-top: 100px;">
         
-        <h1 class="section-title">BLANKO</h1>
+        <h1 class="section-title">Platforms</h1>
 
+        <!-- Filter buttons -->
+        <div class="review-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="pc">PC</button>
+            <button class="filter-btn" data-filter="playstation">PlayStation</button>
+            <button class="filter-btn" data-filter="xbox">Xbox</button>
+            <button class="filter-btn" data-filter="nintendo">Nintendo</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+        </div>
 
-        </section>
+        <!-- Grid for platform news/features -->
+        <div class="blog-grid">
+
+            <!-- Example Card 1: PC -->
+            <div class="blog-card" data-platform="pc">
+                <div class="blog-image">
+                    <img src="images/Hardware/gpu1.jpeg" alt="PC Gaming" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-category">PC Gaming</div>
+                    <h3 class="blog-title">The State of PC Gaming in 2025</h3>
+                    <p class="blog-excerpt">From new hardware reveals to the most anticipated software, here's what PC gamers have to look forward to this year.</p>
+                    <div class="blog-meta">
+                        <span>10 min read</span>
+                        <a href="Gpu.html" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Card 2: Nintendo -->
+            <div class="blog-card" data-platform="nintendo">
+                <div class="blog-image">
+                    <img src="images/Switch2/switch2.avif" alt="Nintendo Switch 2" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-category">Nintendo</div>
+                    <h3 class="blog-title">Nintendo Switch 2: All Confirmed Details</h3>
+                    <p class="blog-excerpt">We've gathered all the facts, rumors, and confirmed details about Nintendo's next-generation console.</p>
+                    <div class="blog-meta">
+                        <span>8 min read</span>
+                        <a href="switch.html" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Card 3: Mobile -->
+            <div class="blog-card" data-platform="mobile">
+                <div class="blog-image">
+                    <img src="images/Ananta/ananta1.jpg" alt="Mobile Gaming" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-category">Mobile</div>
+                    <h3 class="blog-title">The Rise of AAA Mobile Titles</h3>
+                    <p class="blog-excerpt">Games like Ananta and Arena Breakout are proving that mobile can deliver console-quality experiences. We dive deep.</p>
+                    <div class="blog-meta">
+                        <span>7 min read</span>
+                        <a href="Ananta.html" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Example Card 4: PlayStation -->
+            <div class="blog-card" data-platform="playstation">
+                <div class="blog-image">
+                    <img src="images/Reviews/astrobot.jpg" alt="PlayStation" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-category">PlayStation</div>
+                    <h3 class="blog-title">PlayStation's Most Anticipated Exclusives</h3>
+                    <p class="blog-excerpt">A look at the upcoming titles that will define the PlayStation 5's library in the coming year, starting with Astro Bot.</p>
+                    <div class="blog-meta">
+                        <span>6 min read</span>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <footer id="footer">
         <p>&copy; 2025 GameHaven. All rights reserved.</p>
     </footer>
+
+    <script>
+        // --- Platform Page Filtering ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const platformCards = document.querySelectorAll('.blog-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const filter = button.dataset.filter;
+
+                    // Show/hide cards based on filter
+                    platformCards.forEach(card => {
+                        const cardPlatform = card.dataset.platform;
+                        
+                        if (filter === 'all' || cardPlatform === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>

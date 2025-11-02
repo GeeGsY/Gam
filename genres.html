@@ -11,28 +11,145 @@
 <body>
 
     <header>
-        <nav>
-            <div class="logo">
-                <span><a href="index.html" id="namee">Game</span><span id="haven">Haven</span></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="news.html">News</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="platforms.html">Platforms</a></li>
-                <li><a href="genres.html">Genres</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                </ul>
-        </nav>
-    </header>
+    <nav>
+        <div class="logo">
+           <span><a href="index.html" id="namee">Game</span><span id="haven">Haven</span></a>
+        </div>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        
+        <label for="nav-toggle" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="news.html">News</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="platforms.html">Platforms</a></li>
+            <li><a href="genres.html">Genres</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
     <section class="section" style="padding-top: 100px;">
         
-       
-        </section>
+        <h1 class="section-title">Genres</h1>
+
+        <!-- Filter buttons -->
+        <div class="review-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="rpg">RPG</button>
+            <button class="filter-btn" data-filter="shooter">Shooter</button>
+            <button class="filter-btn" data-filter="action">Action</button>
+            <button class="filter-btn" data-filter="indie">Indie</button>
+            <button class="filter-btn" data-filter="strategy">Strategy</button>
+        </div>
+
+        <!-- Grid for genre news/features -->
+        <div class="blog-grid">
+
+            <!-- Example Card 1: Indie -->
+            <div class="blog-card" data-genre="indie">
+                <div class="blog-image">
+                    <img src="images/Indie/Silksong.avif" alt="Indie Games" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-category">Indie</div>
+                    <h3 class="blog-title">The Indie-pocalypse: Fact or Fiction?</h3>
+                    <p class="blog-excerpt">With more indie games releasing than ever, we explore the challenges and triumphs of small studios in 2025.</p>
+                    <div class="blog-meta">
+                        <span>12 min read</span>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Card 2: RPG -->
+            <div class="blog-card" data-genre="rpg">
+                <div class="blog-image">
+                    <img src="images/Reviews/elden ring.webp" alt="RPG Games" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-category">RPG</div>
+                    <h3 class="blog-title">The Evolution of the Open-World RPG</h3>
+                    <p class="blog-excerpt">From Elden Ring to today, how has the open-world role-playing-game formula changed, and what's next?</p>
+                    <div class="blog-meta">
+                        <span>15 min read</span>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Card 3: Shooter -->
+            <div class="blog-card" data-genre="shooter">
+                <div class="blog-image">
+                    <img src="images/Battlefield 6/bf61.jpg" alt="Shooter Games" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-category">Shooter</div>
+                    <h3 class="blog-title">The Return of Large-Scale Warfare</h3>
+                    <p class="blog-excerpt">Battlefield 6 marks a return to form, but what other shooters are innovating in the large-scale combat space?</p>
+                    <div class="blog-meta">
+                        <span>9 min read</span>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Example Card 4: Action -->
+            <div class="blog-card" data-genre="action">
+                <div class="blog-image">
+                    <img src="images/Reviews/astrobot.jpg" alt="Action Games" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-category">Action</div>
+                    <h3 class="blog-title">The Joy of 3D Platformers</h3>
+                    <p class="blog-excerpt">Astro Bot proves there's still magic in the action-platformer genre. We look at the best of the best.</p>
+                    <div class="blog-meta">
+                        <span>7 min read</span>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <footer id="footer">
         <p>&copy; 2025 GameHaven. All rights reserved.</p>
     </footer>
+
+    <script>
+        // --- Genre Page Filtering ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const genreCards = document.querySelectorAll('.blog-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const filter = button.dataset.filter;
+
+                    // Show/hide cards based on filter
+                    genreCards.forEach(card => {
+                        const cardGenre = card.dataset.genre;
+                        
+                        if (filter === 'all' || cardGenre === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
